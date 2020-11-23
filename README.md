@@ -1,7 +1,7 @@
 # SmartDungeon
 [Plugin] PMMP Set up monsters and Spawners!
 
-# Developer API.
+# Support Developer API.
 
 #### How use MonsterData?
 
@@ -70,3 +70,51 @@ $data->setTargetingDistance(float $amount); //set monster targeting distance
 $data->addItem(Item $item, float $percent); //add monster drop reward item
 $data->deleteItem(int $index);              //delete monster drop reward item
 ```
+
+* Get All SpawnerDatas.
+```php
+/** @var SpawnerData[] $datas */
+$datas = DungeonFactory::getInstance()->getSpawnerDatas();
+```
+
+* Get SpawnerData.
+```php
+/** @var SpawnerData $data */
+$data = DungeonFactory::getInstance()->getSpawnerData(string $hash);
+```
+
+* Create SpawnerData.
+```php
+/**
+ * @param string $posHash
+ * @param string $entityName
+ * @param float $playerCheckDistance
+ * @param float $spawnRadius
+ * @param int $spawnTick
+ * @description spawntick 1 -> 1sec
+ */
+DungeonFactory::getInstance()->addSpawnerData($posHash, $entityName, $playerCheckDistance, $spawnRadius, $spawnTick);
+```
+
+* Manage SpawnerData.
+```php
+/** @var SpawnerData $data */
+$data->getPosHash();                                //get Spawner PosHash
+$data->getEntityName();                             //get Spawner EntityName
+$data->getPlayerCheckDistance();                    //get Spawner PlayerCheckDistance
+$data->getSpawnRadius();                            //get Spawner SpawnRadius
+$data->getSpawnTick();                              //get Spawner SpawnTick
+
+$data->setEntityName(string $name);                 //set Spawner EntityName
+$data->setPlayerCheckDistance(float $distance);     //set Spawner PlayerCheckDistance
+$data->getSpawnRadius(float $distance);             //set Spawner SpawnRadius
+$data->setSpawnTick(int $tick);                     //set Spawner SpawnTick
+```
+
+# Support Entity AI.
+
+[O] Support Entity Auto Walking.
+[O] Support Entity Auto Swimming.
+[O] Support Entity Auto Jumping.
+[X] Support Entity Auto Flying.
+[O] Support Entity Target Entity Following.
