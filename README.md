@@ -116,5 +116,5 @@ $data->setSpawnTick(int $tick);                     //set Spawner SpawnTick
  * [x] Support Entity Auto Walking.
  * [x] Support Entity Auto Swimming.
  * [x] Support Entity Auto Jumping.
- * [] Support Entity Auto Flying.
+ * [ ] Support Entity Auto Flying.
  * [x] Support Entity Target Entity Following.
