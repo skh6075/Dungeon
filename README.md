@@ -45,6 +45,7 @@ DungeonFactory::getInstance()->addMonsterData($name, $entityHash, $health, $dama
  * @param string $name
  */
 DungeonFactory::getInstance()->deleteMonsterData($name);
+```
 
 * Manage MonsterData.
 ```php
