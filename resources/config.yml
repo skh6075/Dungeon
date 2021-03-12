@@ -1,0 +1,2 @@
+# Removes DungeonEntity from all worlds when the server is disable.
+disable-cleaner: true
